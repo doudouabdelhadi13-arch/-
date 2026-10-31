@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: trademaster-pro
+    runtime: python
+    region: frankfurt
+    buildCommand: python -m py_compile server.py
+    startCommand: python server.py
+    healthCheckPath: /api/health
+    autoDeploy: true
